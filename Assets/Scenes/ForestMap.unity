@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 150029525}
   - component: {fileID: 150029524}
   - component: {fileID: 150029529}
+  - component: {fileID: 150029531}
+  - component: {fileID: 150029530}
   m_Layer: 0
   m_Name: Unicorn_0
   m_TagString: Untagged
@@ -289,6 +291,49 @@ MonoBehaviour:
   Facing: 1
   MyRigidBody2D: {fileID: 150029526}
   Feet: {fileID: 150029524}
+--- !u!95 &150029530
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150029523}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9389c595fc064a343aec22c69016a514, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &150029531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150029523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d63fc23f5a815147975697139b9cec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 150029530}
+  BlockCheck: 0
+  Chooser: 0
+  Cooldown: 0.25
+  PunchCheck: {fileID: 0}
+  KickCheck: {fileID: 0}
+  Range: 1.75
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  PunchDamage: 2
+  KickDamage: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
