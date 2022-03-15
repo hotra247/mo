@@ -12,6 +12,9 @@ public class Muuvmennttaskripte : MonoBehaviour
 
     public Rigidbody2D MyRigidBody2D;
     public CircleCollider2D Feet;
+
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,14 @@ public class Muuvmennttaskripte : MonoBehaviour
         && Feet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             MyRigidBody2D.AddForce(new Vector2(0f, JumpForce),
                 ForceMode2D.Impulse);
+            animator.SetTrigger("Jump");
         }
+
+    if (Feet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+        animator.SetBool("IsTouchingGround", true);
+    } else {
+        animator.SetBool("IsTouchingGround", false);
+    }
     }
 
     void FixedUpdate()

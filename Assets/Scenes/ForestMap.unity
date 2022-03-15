@@ -291,6 +291,7 @@ MonoBehaviour:
   Facing: 1
   MyRigidBody2D: {fileID: 150029526}
   Feet: {fileID: 150029524}
+  animator: {fileID: 150029530}
 --- !u!95 &150029530
 Animator:
   serializedVersion: 3
